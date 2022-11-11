@@ -1,0 +1,31 @@
+<div class="">
+  <form (ngSubmit)="onSubmit()" class="d-flex flex-column" [formGroup]="freelancerFormGroup">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Ex: Joshua">
+    </div>
+
+    <div class="mb-3">
+      <label for="skill" class="form-label">Skill</label>
+      <input type="text" class="form-control" id="skill" formControlName="skill" placeholder="Software Developer, Java Developer, UX Developer, etc">
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="Ex: 0822">
+    </div>
+
+    <div class="mb-3">
+      <label for="notes" class="form-label">Notes</label>
+      <input type="text" class="form-control" id="notes" formControlName="notes" placeholder="">
+    </div>
+
+    <div class="ms-auto">
+      <button class="btn btn-outline-secondary me-2" (click)="goToListFreelancers()">Cancel</button>
+      <button class="btn btn-primary" type="submit" [disabled]="freelancerFormGroup.invalid">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+

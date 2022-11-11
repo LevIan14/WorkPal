@@ -1,0 +1,18 @@
+.card-container {
+  width: 288px;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 20px rgb(29 58 83 / 8%);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.img-rounded {
+  margin: auto;
+  width: 150px;
+  border-radius: 100px;
+}
+
+.search-input {
+  max-width: 500px;
+}

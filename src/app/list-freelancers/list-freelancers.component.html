@@ -1,0 +1,27 @@
+<div class="list-freelancers-container">
+  <div class="d-flex flex-column text-center align-items-center my-4">
+    <h2>List of Your Freelancers' Profile</h2>
+    <p>All expert freelancers that you handle are here</p>
+    <input type="text" class="form-control search-input" placeholder="Search freelancer (Using name, phone, skill, or notes)" (input)="searchFreelancer($event)">
+  </div>
+
+  <div class="d-flex flex-row flex-wrap gap-4 justify-content-center">
+    <div class="card text-center card-hover-shadow card-container" *ngFor="let freelance of listFreelancers">
+      <div class="p-3">
+        <img class="img-rounded" src="/assets/avatar.png" alt="Workers Photo">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">{{freelance.name}}</h5>
+        <p class="card-title text-center">{{freelance.skill}}</p>
+        <p class="card-title text-center">{{freelance.phone}}</p>
+        <p class="card-text text-center">{{freelance.notes}}</p>
+      </div>
+      <div class="card-body d-flex justify-content-center gap-2">
+        <a class="btn btn-primary" (click)="goToFreelancer(freelance.id)">View Freelancer</a>
+        <a class="btn btn-danger" (click)="deleteFreelancer(freelance.id)">Delete </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
